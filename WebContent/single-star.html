@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Star</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+<main>
+    <a class="logout-link" href="api/logout">Log out</a>
+    <a class="checkout-link" href="cart.html">Checkout</a>
+    <a class="back-link" href="api/back-to-list">&larr; Back to Movie List</a>
+    <p id="status" class="status">Loading star...</p>
+
+    <section id="star-details" class="details" hidden>
+        <h1 id="star-name"></h1>
+        <dl>
+            <dt>Year of birth</dt>
+            <dd id="star-birth-year"></dd>
+        </dl>
+        <h2> Movies </h2>
+        <p id="no-movies" class="status" hidden>No movies found for this star.</p>
+        <table id="movie-table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Director</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody id="movie-table-body"></tbody>
+        </table>
+    </section>
+    <script src="js/cart.js"></script>
+<script src="js/single-star.js"></script>
+</main>
+</body>
+</html>

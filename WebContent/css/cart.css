@@ -1,0 +1,80 @@
+.checkout-link {
+    float: right;
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+.add-button, .qty-button, .delete-button, .primary-button {
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-button, .primary-button {
+    padding: 8px 12px;
+    color: #fff;
+    background: blue;
+}
+
+.add-button:disabled, .primary-button:disabled, .qty-button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.qty-button {
+    width: 30px;
+    padding: 5px 0;
+    color: #fff;
+    background: blue;
+}
+
+.qty {
+    display: inline-block;
+    min-width: 36px;
+    text-align: center;
+}
+
+.delete-button {
+    padding: 6px 12px;
+    color: #fff;
+    background: red;
+}
+
+.cart-summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.cart-links {
+    margin-top: 16px;
+}
+
+/* payment page */
+#payment-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: flex-end;
+}
+
+#payment-form .primary-button {
+    padding: 10px 24px;
+    font-size: 16px;
+}
+
+#payment-error {
+    margin: 16px 0 0;
+}
+
+.big-total {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 18px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+<main>
+    <a class="logout-link" href="api/logout">Log out</a>
+    <a class="checkout-link" href="cart.html">Checkout</a>
+    <a class="back-link" href="api/back-to-list">&larr; Back to Movie List</a>
+    <p id="status" class="status">Loading movie...</p>
+    <section id="movie-details" class="details" hidden>
+        <h1 id="movie-title"></h1>
+        <dl>
+            <dt>Year</dt>
+            <dd id="movie-year"></dd>
+            <dt>Director</dt>
+            <dd id="movie-director"></dd>
+            <dt>Genres</dt>
+            <dd id="movie-genres"></dd>
+            <dt>Stars</dt>
+            <dd id="movie-stars"></dd>
+            <dt>Rating</dt>
+            <dd id="movie-rating"></dd>
+        </dl>
+        <p id="cart-action"></p>
+    </section>
+</main>
+
+<script src="js/cart.js"></script>
+<script src="js/single-movie.js"></script>
+
+</body>
+</html>

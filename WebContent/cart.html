@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+<main>
+    <a class="logout-link" href="api/logout">Log out</a>
+    <a class="checkout-link" href="cart.html">Checkout</a>
+    <a class="back-link" href="main.html">&larr; Main Page</a>
+    <h1>Shopping Cart</h1>
+    <p id="status" class="status">Loading your cart...</p>
+
+    <table id="cart-table" hidden>
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody id="cart-body"></tbody>
+    </table>
+
+    <div id="cart-summary" class="cart-summary" hidden>
+        <span>Total price: <strong id="cart-total"></strong></span>
+        <button id="pay-button" class="primary-button" type="button">Proceed to Payment</button>
+    </div>
+</main>
+
+<script src="js/cart.js"></script>
+<script src="js/cart-page.js"></script>
+</body>
+</html>

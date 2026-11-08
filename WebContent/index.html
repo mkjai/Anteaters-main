@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          name="viewport">
+    <title>Movies</title>
+    <link rel="stylesheet" href = "css/style.css">
+    <link rel="stylesheet" href = "css/cart.css">
+</head>
+
+<body>
+<main>
+    <a class="logout-link" href="api/logout">Log out</a>
+    <a class="checkout-link" href="cart.html">Checkout</a>
+    <a class="back-link" href="main.html">&larr; Main Page</a>
+    <h1 id="page-title">Movies</h1>
+
+    <div id="list-controls" class="list-controls" hidden>
+        <label for="sort-select">Sort by</label>
+        <select id="sort-select">
+            <option value="rating_desc_title_asc">Rating (high to low), then title (A to Z)</option>
+            <option value="rating_desc_title_desc">Rating (high to low), then title (Z to A)</option>
+            <option value="rating_asc_title_asc">Rating (low to high), then title (A to Z)</option>
+            <option value="rating_asc_title_desc">Rating (low to high), then title (Z to A)</option>
+            <option value="title_asc_rating_desc">Title (A to Z), then rating (high to low)</option>
+            <option value="title_asc_rating_asc">Title (A to Z), then rating (low to high)</option>
+            <option value="title_desc_rating_desc">Title (Z to A), then rating (high to low)</option>
+            <option value="title_desc_rating_asc">Title (Z to A), then rating (low to high)</option>
+        </select>
+        <label for="limit-select">Movies per page</label>
+        <select id="limit-select">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+    </div>
+
+    <p id="status" class ="status"> Loading...</p>
+
+    <table id="movie-table" hidden>
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Genres</th>
+            <th>Stars</th>
+            <th>Rating</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody id="movie-body"></tbody>
+
+
+    </table>
+    <div id="pager" class="pager" hidden>
+        <button id="prev-button" type="button">&larr; Previous</button>
+        <span id="page-info"></span>
+        <button id="next-button" type="button">Next &rarr;</button>
+    </div>
+</main>
+
+<script src="js/cart.js"></script>
+<script src="js/movie-list.js"></script>
+
+</body>
+
+</html>

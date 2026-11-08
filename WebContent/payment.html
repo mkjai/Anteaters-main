@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+<main>
+    <a class="logout-link" href="api/logout">Log out</a>
+    <a class="checkout-link" href="cart.html">Checkout</a>
+    <a class="back-link" href="main.html">&larr; Main Page</a>
+    <h1>Payment</h1>
+    <p id="status" class="status">Loading your cart...</p>
+
+    <section id="order-summary" class="details" hidden>
+        <p class="big-total">Total price: <span id="payment-total"></span></p>
+
+        <form id="payment-form" method="post" action="api/place-order" hidden>
+            <div class="field">
+                <label for="first-name">First name</label>
+                <input id="first-name" name="firstName" type="text" autocomplete="off" required>
+            </div>
+            <div class="field">
+                <label for="last-name">Last name</label>
+                <input id="last-name" name="lastName" type="text" autocomplete="off" required>
+            </div>
+            <div class="field">
+                <label for="card-number">Credit card number</label>
+                <input id="card-number" name="cardNumber" type="text" autocomplete="off" required>
+            </div>
+            <div class="field">
+                <label for="expiration">Expiration date</label>
+                <input id="expiration" name="expiration" type="date" required>
+            </div>
+            <button id="order-button" class="primary-button" type="submit">Place Order</button>
+        </form>
+
+        <p id="payment-error" class="status error" hidden></p>
+    </section>
+
+    <p class="cart-links"><a href="cart.html">&larr; Back to Shopping Cart</a></p>
+</main>
+
+<script src="js/cart.js"></script>
+<script src="js/payment.js"></script>
+</body>
+</html>

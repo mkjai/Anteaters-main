@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+<main>
+    <a class="logout-link" href="api/logout">Log out</a>
+    <a class="checkout-link" href="cart.html">Checkout</a>
+    <a class="back-link" href="main.html">&larr; Main Page</a>
+    <h1>Order Confirmation</h1>
+    <p id="status" class="status">Loading your order...</p>
+
+    <section id="order-details" class="details" hidden>
+        <h2>Thank you! Your order has been placed.</h2>
+        <p>Sale ID: <span id="sale-ids"></span></p>
+        <table>
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody id="order-body"></tbody>
+        </table>
+        <p class="big-total">Total price: <span id="order-total"></span></p>
+    </section>
+</main>
+
+<script src="js/cart.js"></script>
+<script src="js/confirmation.js"></script>
+</body>
+</html>

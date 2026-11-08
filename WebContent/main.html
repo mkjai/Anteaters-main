@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fabflix</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cart.css">
+  </head>
+  <body>
+    <main>
+      <a class="logout-link" href="api/logout">Log out</a>
+      <a class="checkout-link" href="cart.html">Checkout</a>
+      <h1>Fabflix</h1>
+
+      <section class="details panel">
+        <h2>Search Movies</h2>
+        <form id="search-form" method="get" action="index.html">
+          <div class="field">
+            <label for="title">Title</label>
+            <input id="title" name="title" type="text" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="year">Year</label>
+            <input
+              id="year"
+              name="year"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]{1,4}"
+              title="A year, like 2004"
+              autocomplete="off"
+            />
+          </div>
+          <div class="field">
+            <label for="director">Director</label>
+            <input
+              id="director"
+              name="director"
+              type="text"
+              autocomplete="off"
+            />
+          </div>
+          <div class="field">
+            <label for="star">Star's name</label>
+            <input id="star" name="star" type="text" autocomplete="off" />
+          </div>
+          <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <section class="details panel">
+        <h2>Browse by Genre</h2>
+        <p id="genre-status" class="status">Loading genres...</p>
+        <ul id="genre-list" class="link-list"></ul>
+      </section>
+
+      <section class="details panel">
+        <h2>Browse by Title</h2>
+        <ul id="char-list" class="link-list"></ul>
+      </section>
+
+      <p><a href="index.html">See the top-rated movies</a></p>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
